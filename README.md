@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# Mini Project To-Do App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🚀 Quick Start
 
-## Get started
+### Prerequisites
 
-1. Install dependencies
+- Node.js (v16 or higher)
+- npm or yarn
+- Expo CLI (`npm install -g @expo/cli`)
+- iOS Simulator (for Mac) or Android Studio (for Android development)
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/Sagar-1103/stride-note
+   ```
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
-
-2. Start the app
+3. **Start the development server**
 
    ```bash
-   npx expo start
+   npm run start
    ```
+4. **Run on your device**
 
-In the output, you'll find options to open the app in a
+   - **iOS**: Press `i` in the terminal or scan QR code with Camera app
+   - **Android**: Press `a` in the terminal or scan QR code with Expo Go app
+   - **Web**: Press `w` in the terminal to open in browser
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🧪 Development Challenges & Solutions
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 1. **State Management Complexity**
 
-## Get a fresh project
+**Challenge**: Managing nested state (projects containing tasks).
 
-When you're ready, run:
+**Solution**:
 
-```bash
-npm run reset-project
-```
+- Implemented React Context with useReducer
+- Created separate contexts for projects and theme to avoid unnecessary re-renders
+- Used immutable update patterns to prevent state mutation bugs
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. **Navigation Architecture**
 
-## Learn more
+**Challenge**: Implementing clean navigation between projects list and individual project details while maintaining state.
 
-To learn more about developing your project with Expo, look at the following resources:
+**Solution**:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Used Expo Router with typed routes for type-safe navigation
+- Implemented tab based primary navigation with stack navigation for details
 
-## Join the community
+### 4. **Theme System Implementation**
 
-Join our community of developers creating universal apps.
+**Challenge**: Creating a generalized theme system that works across all components.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Solution**:
+
+- Built centralized color system with light/dark variants
+- Used React Context for theme state with memoized values
+
+## 🚀 Future Improvements
+
+### 📈 Features
+
+- **Project Categories**: Organize projects into categories (Work, Personal, etc.)
+- **Due Dates**: Add deadline tracking for tasks and projects
+- **Search & Filter**: Find projects and tasks quickly
+- **Statistics**: Completion rates, productivity insights
+- **Notifications**: Reminders for upcoming deadlines
