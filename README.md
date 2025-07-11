@@ -15,6 +15,7 @@
 
    ```bash
    git clone https://github.com/Sagar-1103/stride-note
+   cd stride-note
    ```
 2. **Install dependencies**
 
