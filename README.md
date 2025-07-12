@@ -1,5 +1,9 @@
 # Mini Project To-Do App
 
+## 🎥 Demo Video
+
+**Watch the app in action:** [Mini Todo App Demo Video](https://drive.google.com/file/d/1YjftBeABezU2b6P9vIzSj92BKrfdiFtz/view?usp=drive_link)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
